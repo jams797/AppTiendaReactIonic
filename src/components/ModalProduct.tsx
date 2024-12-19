@@ -18,7 +18,9 @@ const ModalProduct : React.FC<ModalProdtuctProps>  = ({ title, isOpen, onClose, 
       <div className="modal-content" onClick={(e) => e.stopPropagation()}>
         <button className="close-btn" onClick={onClose}>X</button>
         <h1 className="modal-title">{title}</h1>
-        <img src={img} alt="Modal Content" className="modal-image" />
+        <div className="contentImg">
+            <img src={img} alt="Modal Content" className="modal-image" />
+        </div>
         <h3 className="modal-description">{description}</h3>
       </div>
     </div>,

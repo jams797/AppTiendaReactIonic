@@ -50,7 +50,7 @@ const ItemProductList: React.FC<ItemProductListProps> = ({listProducts, updateLi
                     <IonRow>
                         {listProducts.map((item: any) => (
                             <IonCol id={item.id} size="12" size-md="6" size-lg="3" className="ion-padding">
-                                <IonCard onClick={() => openProductModal(item)}>
+                                <IonCard>
                                     <IonCardHeader>
                                         <IonCardTitle>
                                             <span className="titleProduct">{item.title}</span>
@@ -61,7 +61,7 @@ const ItemProductList: React.FC<ItemProductListProps> = ({listProducts, updateLi
                                             )}
                                         </IonCardTitle>
                                     </IonCardHeader>
-                                    <IonCardContent>
+                                    <IonCardContent onClick={() => openProductModal(item)}>
                                         <img src={ParseImage(item.images[0])} alt="imagen" />
                                     </IonCardContent>
                                 </IonCard>
